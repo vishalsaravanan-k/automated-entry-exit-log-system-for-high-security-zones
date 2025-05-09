@@ -50,52 +50,52 @@ This project addresses these gaps by designing an automated, multi-layered secur
 
 ESP32-WROOM-32D handles:
 
-    - Fingerprint matching against a local CSV database
+ - Fingerprint matching against a local CSV database
 
-    - Communicating with RFID module and OLED display
+ - Communicating with RFID module and OLED display
 
-    - Sending MQTT triggers to ESP32-CAM
+ - Sending MQTT triggers to ESP32-CAM
 
-    - Writing logs to microSD card
+ - Writing logs to microSD card
 
 ESP32-CAM:
 
-    - Receives MQTT command
+ - Receives MQTT command
 
-    - Captures a real-time image
+ - Captures a real-time image
 
-    - Sends image via HTTP to Flask server
+ - Sends image via HTTP to Flask server
 
 Flask Server (app.py):
 
-    - Receives and stores uploaded images
+ - Receives and stores uploaded images
 
-    - Handles MQTT messages (entry, exit, camera metadata)
+ - Handles MQTT messages (entry, exit, camera metadata)
 
-    - Pushes data to dashboard using Socket.IO
+ - Pushes data to dashboard using Socket.IO
 
 Web Dashboard (index.html):
 
-    - Displays real-time entry/exit logs
+ - Displays real-time entry/exit logs
 
-    - Shows user information with photos
+ - Shows user information with photos
 
-    - Offers a responsive, modern UI for security staff
+ - Offers a responsive, modern UI for security staff
 ## ⚙️ WORKING PRINCIPLE
 
-    Entry Process:
+Entry Process:
 
-        Scan fingerprint → Capture image → Issue RFID tag → Log entry.
+- Scan fingerprint → Capture image → Issue RFID tag → Log entry.
 
-    Exit Process:
+Exit Process:
 
-        Scan RFID tag → Update exit time → Log exit.
+- Scan RFID tag → Update exit time → Log exit.
 
-    Dashboard:
+Dashboard:
 
-        Real-time updates for entries/exits.
+- Real-time updates for entries/exits.
 
-        View historical logs and images.
+- View historical logs and images.
 ## 📂 REPOSITORY STRUCTURE FOR FLASK SERVER
  
 ├── app.py                 # Flask server + MQTT handler  
